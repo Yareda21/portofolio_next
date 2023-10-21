@@ -6,12 +6,12 @@ import { fadeIn } from "../variants";
 
 export default function Home() {
   return (
-    <div className="bg-primary/60 h-[90%]">
+    <div className="bg-primary/60 h-full">
       {/* text */}
-      <div
-        className="w-full h-full bg-gradient-to-r from-primary/10 
+      <div className="w-full h-full bg-gradient-to-r from-primary/10 
       via-black/30 to-black/10"
       >
+        {/* notes in home page */}
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
           {/* title */}
           <h1 className="h1">
@@ -25,24 +25,34 @@ export default function Home() {
             Next.js and many more.
           </p>
           {/* button */}
-          <dir className="flex justify-center xl:justify-start">
+          {/* <dir className="flex justify-center xl:justify-start">
             <ProjectsBtn />
-          </dir>
+          </dir> */}
         </div>
       </div>
 
       {/* image */}
-      <div className="w-[1200px] h-full absolute right-0">
-        hello
+      <div className="w-[1200px] h-full absolute right-0 bottom-0">
         {/* bg-image */}
-        <div>
-          <Image
-            src={"/bg-explosion.png"}
-            className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right
-          xl:bg-no-repeat w-full aboslute mix-blend-color-dodge "
-            width={500}
-            height={500}
-          />
+        <Image
+          src={"/bg-explosion.png"}
+          width={600}
+          height={600}
+          className="hidden xl:block xl:bg-cover xl:bg-right
+          xl:bg-no-repeat w-full absolute mix-blend-color-dodge translate-z-0"
+        />
+        {/* <div
+          className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right
+          xl:bg-no-repeat w-full absolute mix-blend-color-dodge translate-z-0 "
+        ></div> */}
+        {/* particles */}
+        <div>Particles</div>
+        {/* Avatar */}
+        <div
+          className="w-full h-full max-w-[500px] max-h-[450px] absolute 
+          bottom-40 lg:right-[12%]"
+        >
+          <Avatar />
         </div>
       </div>
     </div>

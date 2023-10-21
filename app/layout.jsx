@@ -3,6 +3,7 @@ import "./globals.css";
 import TopLeftImg from "@/components/TopLeftImg";
 import Nav from "@/components/Nav";
 import Header from "@/components/Header";
+import ProjectsBtn from "@/components/ProjectsBtn";
 const sora = Sora({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -19,6 +20,9 @@ export default function RootLayout({ children }) {
       <body
         className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}
       >
+        <div className="z-30 w-full h-full absolute top-0 left-0">
+          <ProjectsBtn />
+        </div>
         <TopLeftImg />
         <Nav />
         <Header />
