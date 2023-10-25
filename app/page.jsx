@@ -8,7 +8,8 @@ export default function Home() {
   return (
     <div className="bg-primary/60 h-full">
       {/* text */}
-      <div className="w-full h-full bg-gradient-to-r from-primary/10 
+      <div
+        className="w-full h-full bg-gradient-to-r from-primary/10 
       via-black/30 to-black/10"
       >
         {/* notes in home page */}
@@ -24,10 +25,6 @@ export default function Home() {
             project experience in web development platforms like React.js,
             Next.js and many more.
           </p>
-          {/* button */}
-          {/* <dir className="flex justify-center xl:justify-start">
-            <ProjectsBtn />
-          </dir> */}
         </div>
       </div>
 
@@ -46,7 +43,9 @@ export default function Home() {
           xl:bg-no-repeat w-full absolute mix-blend-color-dodge translate-z-0 "
         ></div> */}
         {/* particles */}
-        <div>Particles</div>
+        <div>
+          <ParticleContainer />
+        </div>
         {/* Avatar */}
         <div
           className="w-full h-full max-w-[500px] max-h-[450px] absolute 

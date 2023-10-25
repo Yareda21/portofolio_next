@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       <body
         className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}
       >
-        <div className="z-30 w-full h-full absolute top-0 left-0">
+        <div className="">
           <ProjectsBtn />
         </div>
         <TopLeftImg />

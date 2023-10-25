@@ -40,10 +40,9 @@ const OpenCards = () => {
   ];
 
   return (
-    <section className="absolute top-0  w-full z-40 py-1 pb-[300px] bg-gradient-to-r from-purple-800 to-indigo-800">
+    <section className="absolute top-10  w-full z-40 py-1 pb-[300px] ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-3xl font-extrabold text-white">Services</h1>
-        <p className="mt-1 text-xl text-gray-300">Check out our latest works</p>
       </div>
       <div className="block m-auto justify-center items-center overflow-scroll z-30 h-[550px] md:overflow-auto">
         <div className="mt-2  flex flex-col md:flex-row justify-center items-center gap-5">
@@ -69,7 +68,7 @@ const OpenCards = () => {
                     {service[index]}
                   </h2>
                   {index === expandedIndex && (
-                    <p className="mt-2 text-gray-300 text-center">
+                    <p className="mt-2 text-gray-300 text-justify px-10">
                       {cardDescriptions[index]}{" "}
                     </p>
                   )}
