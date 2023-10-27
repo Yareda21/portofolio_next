@@ -5,9 +5,9 @@ import { HiArrowRight } from "react-icons/hi2";
 
 const ProjectsBtn = () => {
   return (
-    <div className="z-40 absolute top-0 left-0 h-full w-full">
+    <div className="z-20 absolute top-0 left-0 h-[90%] w-full">
       {/* Projects btn - this is where you change the location */}
-      <div className="scale-50 md:scale-75 lg:scale-90 xl:100 relative top-[30px] left-[100px] ">
+      <div className="scale-50 md:scale-75 lg:scale-90 xl:100 relative top-[430px] left-[100px] ">
         <Link
           href={"/work"}
           className="relative w-[185px] h-[185px]

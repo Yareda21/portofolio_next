@@ -11,7 +11,7 @@ const sora = Sora({
 
 export const metadata = {
   title: "Yared || Full Stack Developer",
-  description: "Hello! This is Yared, Software Engineer Portfolio",
+  description: "Hello! This is Yared Kebede, Software Engineer Portfolio",
 };
 
 export default function RootLayout({ children }) {
@@ -20,9 +20,7 @@ export default function RootLayout({ children }) {
       <body
         className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}
       >
-        <div className="">
-          <ProjectsBtn />
-        </div>
+        <ProjectsBtn />
         <TopLeftImg />
         <Nav />
         <Header />

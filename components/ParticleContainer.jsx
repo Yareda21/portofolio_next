@@ -11,7 +11,7 @@ const ParticleContainer = () => {
   }, [])
   
   const particlesLoaded = useCallback(async () => {},[])
-  
+
   
   return (
     <Particles
@@ -44,7 +44,7 @@ const ParticleContainer = () => {
               quantity: 90,
             },
             repulse: {
-              distance: 200,
+              distance: 100,
               duration: 0.4
             } 
           }
@@ -64,6 +64,16 @@ const ParticleContainer = () => {
             enable: true,
             outModes: {
               default: 'bounce',
+            },
+            random: false,
+            speed: 1,
+            straight: false,
+          },
+          move: {
+            direction: "none",
+            enable: true,
+            outModes: {
+              default: 'bounce'
             },
             random: false,
             speed: 1,

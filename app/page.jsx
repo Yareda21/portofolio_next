@@ -15,15 +15,15 @@ export default function Home() {
         {/* notes in home page */}
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
           {/* title */}
-          <h1 className="h1">
+          <h1 className="h11 md:h1">
             Forging Concepts <br />
             into <span className="text-accent">Digital Reality</span>
           </h1>
           {/* subtitle */}
-          <p className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">
-            A civil engineer and Self-taught web developer with substantial
-            project experience in web development platforms like React.js,
-            Next.js and many more.
+          <p className="text-xl max-w-sm text-white xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">
+            A civil engineer and Self-taught Software Engineer with substantial
+            project experience in web and app development platforms like
+            React.js, Next.js and many more.
           </p>
         </div>
       </div>
