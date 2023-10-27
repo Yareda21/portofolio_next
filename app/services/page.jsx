@@ -41,7 +41,7 @@ const OpenCards = () => {
 
   return (
     <section className="flex flex-col justify-center items-center h-full w-full px-5 ">
-      <div className="z-40 sm:mt-12">
+      <div className="z-40 mt-[110px] h-full w-full">
         <div className="max-w-7xl mx-auto px-4 my-1 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl font-extrabold text-white">Services</h1>
         </div>
