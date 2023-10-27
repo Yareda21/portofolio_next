@@ -96,7 +96,7 @@ const About = () => {
   const [index, setIndex] = useState(0);
 
   return (
-    <div className="h-full w-full bg-primary/30 py-32 text-center xl:text-left">
+    <div className="h-[80%] w-full bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
 
       <div className="hidden xl:flex absolute bottom-0 left-[0px]">
