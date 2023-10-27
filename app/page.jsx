@@ -1,8 +1,7 @@
 import ParticleContainer from "@/components/ParticleContainer";
 import Avatar from "@/components/Avatar";
-import ProjectsBtn from "@/components/ProjectsBtn";
 import Image from "next/image";
-import { fadeIn } from "../variants";
+
 
 export default function Home() {
   return (
