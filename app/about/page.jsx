@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import Circles from "../../components/Circles";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/variants";
 
 import {
   FaHtml5,
@@ -96,10 +98,17 @@ const About = () => {
   const [index, setIndex] = useState(0);
 
   return (
-    <div className="h-[80%] w-full bg-primary/30 py-32 text-center xl:text-left">
+    <div className="absolute z-40 h-full w-full bg-primary/30  py-32 text-center xl:text-left">
       <Circles />
 
-      <div className="hidden xl:flex absolute bottom-0 left-[0px]">
+      <motion.div
+        variants={fadeIn("right", 0.2)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+        className="hidden xl:flex absolute bottom-0 left-[0px]"
+      >
+        {/* avatar */}
         <div className="hidden xl:flex xl:max-w-none">
           <Image
             src={"/avatar2.png"}
@@ -109,22 +118,39 @@ const About = () => {
             className="translate-z-0 w-full h-full"
           />
         </div>
-      </div>
+      </motion.div>
 
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
-        <div>text</div>
-        <div>
-          <div className="flex gap-x-4 xl:gap-x-8 mx-auto 
-          xl:mx-0 mb-4">
+        <div className="flex-1 flex flex-col justify-center">text</div>
+        <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
+          <div
+            className="flex gap-x-4 xl:gap-x-8 mx-auto 
+          xl:mx-0 mb-4"
+          >
             {aboutData.map((item, itemIndex) => {
               return (
                 <div
-                  key={itemIndex}
-                  className={`${index === itemIndex && 'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300' } cursor-pointer capitalize xl:text-lg relative after:w-8 
-                after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
                   onClick={() => setIndex(itemIndex)}
+                  key={itemIndex}
+                  className={`${
+                    index === itemIndex &&
+                    "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
+                  } cursor-pointer capitalize xl:text-lg relative after:w-8 
+                after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
                 >
                   {item.title}
+                </div>
+              );
+            })}
+          </div>
+          <div className="bg-pink-400/10 py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4
+          items-center xl:items-start">
+            {aboutData[index].info.map((item, itemIndex) => {
+              return (
+                <div key={itemIndex}>
+                  {/* title */}
+                  <div>{item.title}</div>
+                  
                 </div>
               );
             })}
