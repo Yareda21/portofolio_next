@@ -122,9 +122,8 @@ const About = () => {
 
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         <div className="flex-1 flex flex-col justify-center">text</div>
-        <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
-          <div
-            className="flex gap-x-4 xl:gap-x-8 mx-auto 
+        <div className="flex flex-col w-full xl:max-w-[48%] after:bg-accent h-[480px]">
+          <div className="flex gap-x-4 xl:gap-x-8 mx-auto 
           xl:mx-0 mb-4"
           >
             {aboutData.map((item, itemIndex) => {
@@ -143,7 +142,7 @@ const About = () => {
               );
             })}
           </div>
-          <div className="bg-pink-400/10 py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4
+          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4
           items-center xl:items-start">
             {aboutData[index].info.map((item, itemIndex) => {
               return (
