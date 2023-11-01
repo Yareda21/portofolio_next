@@ -107,7 +107,7 @@ const About = () => {
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="hidden z-[-10] xl:flex absolute bottom-0 -left-[190px]"
+        className="hidden z-[-10] xl:flex absolute bottom-0 -left-[210px]"
       >
         <div className="hidden xl:flex xl:max-w-none">
           <Image
