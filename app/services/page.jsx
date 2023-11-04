@@ -22,22 +22,22 @@ const OpenCards = () => {
     },
   };
 
-  const cardImages = ["/a.jpg", "/b.jpg", "/c.jpg", "/d.jpg", "/e.jpg"];
-  const service = [
-    "Full Stack",
-    "Frontend Development",
-    "Mobile Application",
-    "Digital Marketing",
-    "Software Development",
-  ];
+const cardImages = ["/a.jpg", "/b.jpg", "/c.jpg", "/d.jpg", "/e.jpg"];
+const service = [
+  "Full Stack",
+  "Frontend Development",
+  "Mobile Application",
+  "Digital Marketing",
+  "Software Development",
+];
 
-  const cardDescriptions = [
-    "This is a description, write whatever you need here, this is just text for a test",
-    "This is a description, write whatever you need here, this is just text for a test",
-    "This is a description, write whatever you need here, this is just text for a test",
-    "This is a description, write whatever you need here, this is just text for a test",
-    "This is a description, write whatever you need here, this is just text for a test",
-  ];
+const cardDescriptions = [
+  "This is a description, write whatever you need here, this is just text for a test",
+  "This is a description, write whatever you need here, this is just text for a test",
+  "This is a description, write whatever you need here, this is just text for a test",
+  "This is a description, write whatever you need here, this is just text for a test",
+  "This is a description, write whatever you need here, this is just text for a test",
+];
 
   return (
     <section className="flex flex-col justify-center items-center h-full w-full px-5 ">

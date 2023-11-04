@@ -5,6 +5,8 @@ import Link from "next/link";
 import { HiArrowRight } from "react-icons/hi2";
 
 
+
+
 export default function Home() {
   return (
     <div className="bg-primary/60 h-full">

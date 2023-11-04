@@ -32,13 +32,13 @@ const Modal = ({ handleClose }) => {
     >
       <motion.div
         onClick={(e) => e.stopPropagation()}
-        className="w-[50%] bg-slate-50 text-black z-40 m-auto py-0 px-2  rounded-lg flex flex-col items-center"
+        className="w-[50%] bg-black/70 text-white/70 z-40 m-auto py-0 px-2  rounded-lg flex flex-col items-center"
         variants={dropIn}
         initial="hidden"
         animate="visible"
         exit="exit"
       >
-        <p className="text-black">Hello</p>
+        <p className="text-white/75">Hello</p>
         <button onClick={handleClose}>Close</button>
       </motion.div>
     </motion.div>
