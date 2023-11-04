@@ -70,10 +70,6 @@ const aboutData = [
         title: "Web Developer - ABC Agency",
         stage: "2010 - 2012",
       },
-      {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
-      },
     ],
   },
   {
@@ -136,9 +132,13 @@ const About = () => {
             <div>
               {/* experiance */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <CountUp start={0} end={10} duration={5} /> +
+                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                  <CountUp start={0} end={10} duration={5} /> +
+                </div>
               </div>
-              <div>Years of Experiance</div>
+              <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+                Years of Experiance
+              </div>
             </div>
           </div>
         </div>
@@ -169,7 +169,7 @@ const About = () => {
                   className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
                 >
                   {/* title */}
-                  <div className="font-light mb-2 md:mb-0">{item.title}</div>
+                  <div className="font-light md:mb-0">{item.title}</div>
                   <div className="hidden md:flex">-</div>
                   <div>{item.stage}</div>
                   <div className="flex gap-x-4">
