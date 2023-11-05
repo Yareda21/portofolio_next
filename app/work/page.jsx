@@ -8,7 +8,20 @@ const App = () => {
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
 
-  
+  const subjects = [
+    {
+      name: "HTML...",
+      details: "The project details is here"
+    },
+    {
+      name: "CSS...",
+      details: "The project details is here"
+    },
+    {
+      name: "JavaScript...",
+      details: "The project details is here"
+    },
+  ]
 
   return (
     <div className="absolute top-0 left-0 w-full h-full">

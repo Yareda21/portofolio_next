@@ -14,6 +14,8 @@ import {
   FaReact,
   FaWordpress,
   FaFigma,
+  FaGit,
+  FaNode,
 } from "react-icons/fa";
 
 import {
@@ -22,6 +24,14 @@ import {
   SiAdobexd,
   SiAdobephotoshop,
   SiTailwindcss,
+  SiNodedotjs,
+  SiPython,
+  SiGithub,
+  SiLinux,
+  SiC,
+  SiIos,
+  SiAndroid,
+  SiVisualstudiocode,
 } from "react-icons/si";
 
 //  data
@@ -32,65 +42,77 @@ const aboutData = [
       {
         title: "Web Development",
         icons: [
+          <FaFigma />,
           <FaHtml5 />,
           <FaCss3 />,
           <FaJs />,
           <FaReact />,
           <SiTailwindcss />,
           <SiFramer />,
-          <SiFramer />,
+          <SiNextdotjs />,
+          <SiNodedotjs />,
         ],
       },
       {
         title: "Software Development",
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        icons: [<SiPython />, <FaGit />, <SiGithub />, <SiLinux />, <SiC />],
       },
       {
         title: "Application Development",
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        icons: [
+          <FaReact />,
+          <FaNode />,
+          <SiIos />,
+          <SiAndroid />,
+          <SiVisualstudiocode />,
+        ],
       },
     ],
   },
-  {
-    title: "awards",
-    info: [
-      {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
-      },
-      {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
-      },
-    ],
-  },
+  // {
+  //   title: "awards",
+  //   info: [
+  //     {
+  //       title: "Webby Awards - Honoree",
+  //       stage: "2011 - 2012",
+  //     },
+  //     {
+  //       title: "Adobe Design Achievement Awards - Finalist",
+  //       stage: "2009 - 2010",
+  //     },
+  //   ],
+  // },
   {
     title: "experience",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
+        title: "Full Stack Web Developer and Lecturer - Exceed ",
+        stage: "2022 - 2023",
       },
       {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
+        title: "Web Developer - Great College",
+        stage: "2021 - 2022",
       },
     ],
   },
   {
-    title: "credentials",
+    title: "Certificates and Class",
     info: [
       {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
+        title: "Software Engineering - ALX",
+        stage: "2023 Cohort 17",
       },
       {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
+        title: "CS50’s Introduction to Computer Science - Harvard",
+        stage: "2023",
       },
       {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
+        title: "Diploma in HTML5, CSS3 and JavaScript - Alison.com ",
+        stage: "2021",
+      },
+      {
+        title: "Machine Learning for Apps - Alison.com",
+        stage: "2021",
       },
     ],
   },
@@ -100,7 +122,7 @@ const About = () => {
   const [index, setIndex] = useState(0);
 
   return (
-    <div className="absolute z-40 h-full w-full bg-primary/30  py-32 md:pt-13 text-center xl:text-left">
+    <div className="absolute z-40 h-full w-full bg-primary/30  pt-[100px] md:pt-13 xl:text-left">
       <Circles />
 
       <motion.div
@@ -108,7 +130,7 @@ const About = () => {
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="hidden z-[-10] xl:flex absolute bottom-0 -left-[210px]"
+        className="hidden z-[-10] xl:flex absolute bottom-0 -left-[180px]"
       >
         <div className="hidden xl:flex xl:max-w-none">
           <Image
@@ -125,21 +147,28 @@ const About = () => {
         </div>
       </motion.div>
 
-      <div className="container mx-auto h-full flex z-10 flex-col items-center xl:flex-row gap-y-6">
+      <div className="container mx-auto h-full flex z-10 flex-col items-center xl:flex-row">
         {/* text */}
         <div className="flex-1 flex flex-col justify-center items-center ">
-          <h2 className="h2">
+          <h2 className="h2 text-center">
             Captivating <span className="text-accent">Stories</span> birth
             magnificent designs.
           </h2>
           <p className="max-w-[500px] text-white flex-1 xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
-            10 years ago, I began freelancing as a developer. since then, I've
-            done remote work for agencies,
+            I thrive on difficult projects that necessitate creative solutions,
+            and I enjoy working with a wide range of programming languages and
+            frameworks, including{" "}
+            <span className="text-accent">
+              {" "}
+              JAVASCRIPT, PYTHON, HTML, CSS, TAILWINDCSS, REACT, EXPO{" "}
+            </span>{" "}
+            and many more..
           </p>
           {/* counter */}
           <div>
             <div>
               {/* experiance */}
+              {/*
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={10} duration={5} /> +
@@ -148,6 +177,7 @@ const About = () => {
               <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                 Years of Experiance
               </div>
+              */}
             </div>
           </div>
         </div>
