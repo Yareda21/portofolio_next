@@ -71,7 +71,6 @@ export default function Home() {
                 src={"/rounded-text.png"}
                 loading="lazy"
                 layout="responsive"
-                objectFit="cover"
                 objectPosition="center"
                 width={141}
                 height={148}
