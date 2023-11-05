@@ -21,6 +21,7 @@ import {
   SiFramer,
   SiAdobexd,
   SiAdobephotoshop,
+  SiTailwindcss,
 } from "react-icons/si";
 
 //  data
@@ -35,13 +36,17 @@ const aboutData = [
           <FaCss3 />,
           <FaJs />,
           <FaReact />,
-          <SiNextdotjs />,
+          <SiTailwindcss />,
           <SiFramer />,
-          <FaWordpress />,
+          <SiFramer />,
         ],
       },
       {
-        title: "UI/UX Design",
+        title: "Software Development",
+        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+      },
+      {
+        title: "Application Development",
         icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
       },
     ],
@@ -108,6 +113,10 @@ const About = () => {
         <div className="hidden xl:flex xl:max-w-none">
           <Image
             src={"/avatar.png"}
+            loading="lazy"
+            layout="responsive"
+            objectFit="cover"
+            objectPosition="center"
             width={400}
             height={600}
             alt="Yared Kebede"

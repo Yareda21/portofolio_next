@@ -17,6 +17,7 @@
     "react-dom": "^18",
     "react-icons": "^4.11.0",
     "react-tsparticles": "^2.12.2",
+    "sharp": "^0.32.6",
     "swiper": "^10.3.1",
     "tailwind-scrollbar": "^3.0.5",
     "tsparticles": "^2.12.0"

@@ -4,6 +4,10 @@ const Avatar = () => {
   return (
     <div className="hidden xl:flex xl:max-w-none">
       <Image
+        loading="lazy"
+        layout="responsive"
+        objectFit="cover"
+        objectPosition="center"
         src={"/avatar.png"}
         width={600}
         height={800}

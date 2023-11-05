@@ -36,6 +36,10 @@ export default function Home() {
         {/* bg-image */}
         <Image
           src={"/bg-explosion.png"}
+          loading="lazy"
+          layout="responsive"
+          objectFit="cover"
+          objectPosition="center"
           width={600}
           height={600}
           className="hidden xl:block xl:bg-cover xl:bg-right
@@ -63,16 +67,19 @@ export default function Home() {
               href={"/work"}
               className="relative w-[185px] h-[185px] flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group"
             >
-              <Image src={"/rounded-text.png"}
+              <Image
+                src={"/rounded-text.png"}
+                loading="lazy"
+                layout="responsive"
+                objectFit="cover"
+                objectPosition="center"
                 width={141}
                 height={148}
                 alt="Yared Kebede"
                 className="animate-spin-slow w-full h-full 
             max-w-[141px] max-h-[148px]"
               />
-              <HiArrowRight
-                className="absolute text-4xl group-hover:translate-x-2 transition-all duration-300"
-              />
+              <HiArrowRight className="absolute text-4xl group-hover:translate-x-2 transition-all duration-300" />
             </Link>
           </div>
         </div>
