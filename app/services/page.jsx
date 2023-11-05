@@ -22,7 +22,7 @@ const OpenCards = () => {
     },
   };
 
-const cardImages = ["/a.jpg", "/b.jpg", "/c.jpg", "/d.jpg", "/e.jpg"];
+const cardImages = ["/a.jpeg", "/b.jpg", "/c.png", "/d.jpg", "/f.jpeg"];
 const service = [
   "Full Stack",
   "Frontend Development",
