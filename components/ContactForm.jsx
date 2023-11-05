@@ -22,13 +22,18 @@ const ContactForm = () => {
             placeholder="Type your message here...."
           ></textarea>
         </div>
-        <button className="bg-green-700 mt-2 mx-auto p-3 text-white font-bold" type="submit">Send</button>
+        <button
+          className="bg-green-700 mt-2 mx-auto p-3 text-white font-bold"
+          type="submit"
+        >
+          Send
+        </button>
       </form>
 
-        <div className="bg-slate-100 flex flex-col">
-            <div className="text-red-600 px-5 py-2">
-                Error Message
-            </div>
+      <div className="bg-slate-100 mx-auto flex flex-col w-[90%] md:w-[50%] md:mx-0">
+        <div className="text-red-600 px-5 py-2 w-[90%] md:w-[50%] md:mx-0">
+          Error Message
+        </div>
       </div>
     </div>
   );
