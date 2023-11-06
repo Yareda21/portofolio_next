@@ -18,7 +18,7 @@ const ContactForm = () => {
       headers: {
         "Content-type": "application/json",
       },
-      body: JSON.stringify({ fullName, email, phone, message }),
+      body: JSON.stringify({ fullName,  phone, email, message }),
     });
 
     // creating the msg
@@ -28,7 +28,7 @@ const ContactForm = () => {
 
   return (
     <div className="w-[100%] md:w-[80%] mx-auto">
-      <form className="flex flex-col gap-2 py-4 z-30 mx-auto w-[90%] md:w-[50%] md:mx-0">
+      <form className="flex flex-col gap-2 py-4 mx-auto w-[90%] md:w-[50%] md:mx-0">
         <div>
           <label htmlFor="fullname">Full Name</label>
           <input
@@ -73,7 +73,7 @@ const ContactForm = () => {
             placeholder="Type your message here...."
           ></textarea>
         </div>
-        
+
         <button
           className="bg-green-700 mt-1 mx-auto px-4 text-white font-bold"
           type="submit"
@@ -90,7 +90,9 @@ const ContactForm = () => {
       </div>
 
       <div className="hidden absolute top-[150px] md:flex right-[100px] w-[350px] h-[450px]">
-        <video autoPlay loop
+        <video
+          autoPlay
+          loop
           type="video/mp4"
           src="/video.mp4"
           width="100%"

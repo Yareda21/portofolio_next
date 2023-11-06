@@ -4,16 +4,17 @@ import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
-  const { fullName, email, phone, message } = await req.json();
+  const { fullName, phone, email, message } = await req.json();
 
+  console.log(fullName);
   try {
     await connectDB();
-    await Contact.create({ fullName, email, phone, message });
-
+    await Contact.create({ fullName, phone, email, message });
     return NextResponse.json({
       msg: ["Message Sent Successfully"],
       success: true,
     });
+    
   } catch (error) {
     if (error instanceof mongoose.Error.ValidationError) {
       let errorList = [];
@@ -21,7 +22,8 @@ export async function POST(req) {
         errorList.push(key.message);
       }
       return NextResponse.json({ msg: errorList });
-    } else {
+    }
+    else {
       return NextResponse.json(error);
     }
   }
