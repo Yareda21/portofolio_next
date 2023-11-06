@@ -24,7 +24,7 @@ form > div {
 }
 
 input, textarea {
-  @apply shadow-md px-6 py-2 border border-slate-300 text-black;
+  @apply shadow-md px-6 py-1 border border-slate-300 text-black;
 }
 
 @layer base {

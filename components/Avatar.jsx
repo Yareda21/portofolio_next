@@ -6,7 +6,6 @@ const Avatar = () => {
       <Image
         loading="lazy"
         layout="responsive"
-        objectPosition="center"
         src={"/avatar.png"}
         width={600}
         height={800}

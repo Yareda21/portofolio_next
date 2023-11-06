@@ -137,8 +137,6 @@ const About = () => {
             src={"/avatar.png"}
             loading="lazy"
             layout="responsive"
-            objectFit="cover"
-            objectPosition="center"
             width={400}
             height={600}
             alt="Yared Kebede"
@@ -181,7 +179,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className=" flex flex-col w-full xl:max-w-[48%] h-[480px] justify-center">
+        <div className=" flex flex-col w-full xl:max-w-[48%] h-[480px]">
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => {
               return (

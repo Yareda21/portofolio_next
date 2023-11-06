@@ -12,8 +12,7 @@ export default function Home() {
     <div className="bg-primary/60 h-full">
       {/* text */}
       <div
-        className="w-full h-full bg-gradient-to-r from-primary/10 
-      via-black/30 to-black/10"
+        className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10"
       >
         {/* notes in home page */}
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
@@ -38,8 +37,6 @@ export default function Home() {
           src={"/bg-explosion.png"}
           loading="lazy"
           layout="responsive"
-          objectFit="cover"
-          objectPosition="center"
           width={600}
           height={600}
           className="hidden xl:block xl:bg-cover xl:bg-right
@@ -71,7 +68,6 @@ export default function Home() {
                 src={"/rounded-text.png"}
                 loading="lazy"
                 layout="responsive"
-                objectPosition="center"
                 width={141}
                 height={148}
                 alt="Yared Kebede"

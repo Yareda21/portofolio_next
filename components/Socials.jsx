@@ -11,7 +11,7 @@ import {
 
 const Socials = () => {
   return (
-    <div className="flex items-center gap-x-5 text-[30px]">
+    <div className="flex items-center gap-x-5 text-[20px] md:text-[35px]">
       <Link
         target="_blank"
         title="Discord"
