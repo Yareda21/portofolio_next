@@ -6,7 +6,6 @@ import { NextResponse } from "next/server";
 export async function POST(req) {
   const { fullName, phone, email, message } = await req.json();
 
-  console.log(fullName);
   try {
     await connectDB();
     await Contact.create({ fullName, phone, email, message });
@@ -18,9 +17,10 @@ export async function POST(req) {
   } catch (error) {
     if (error instanceof mongoose.Error.ValidationError) {
       let errorList = [];
-      for (let key in error.errors) {
-        errorList.push(key.message);
+      for (let e in error.errors) {
+        errorList.push(error.errors[e].message);
       }
+      console.log(errorList)
       return NextResponse.json({ msg: errorList });
     }
     else {

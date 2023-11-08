@@ -3,37 +3,49 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Modal from "@/components/Modal";
 
+const subjects = [
+  {
+    name: "HTML, CSS and JvaScript Projects",
+    details: "The project details is here",
+  },
+  {
+    name: "React Projects",
+    details: "The project details is here",
+  },
+  {
+    name: "Python Projects and Codes",
+    details: "The project details is here",
+  },
+];
+
 const App = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
 
-  const subjects = [
-    {
-      name: "HTML...",
-      details: "The project details is here"
-    },
-    {
-      name: "CSS...",
-      details: "The project details is here"
-    },
-    {
-      name: "JavaScript...",
-      details: "The project details is here"
-    },
-  ]
-
+  
+  const [index, setIndex] = useState(0)
   return (
     <div className="absolute top-0 left-0 w-full h-full">
-      <motion.p
-        className="absolute z-10 m-auto top-[50%] left-[50%] bg-white cursor-pointer text-blue-900 px-10 py-5"
+      <motion.div
+        // className="absolute z-10 m-auto top-[50%] left-[50%] bg-white cursor-pointer text-blue-900 px-10 py-5"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => (modalOpen ? close() : open())}
       >
-        HTML, CSS and JS <br />
-        <span className="text-black/50"> The projuct details lies here! </span>
-      </motion.p>
+        {subjects.map((item, itemIndex) => {
+          return (
+            <div className=" ">
+              <h1
+                onClick={() => (modalOpen ? close() : open())}
+                key={itemIndex}
+              >
+                {item.name}
+              </h1>
+            </div>
+          );
+        })}
+      </motion.div>
 
       <AnimatePresence className=" " initial={false}>
         {modalOpen && (

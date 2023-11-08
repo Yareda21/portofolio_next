@@ -8,6 +8,7 @@ const ContactForm = () => {
   const [message, setMessage] = useState("");
   const [phone, setPhone] = useState("");
   const [error, setError] = useState([]);
+  const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,12 +19,20 @@ const ContactForm = () => {
       headers: {
         "Content-type": "application/json",
       },
-      body: JSON.stringify({ fullName,  phone, email, message }),
+      body: JSON.stringify({ fullName, phone, email, message }),
     });
 
     // creating the msg
-    const { msg } = await res.json();
+    const { msg, succ } = await res.json();
     setError(msg);
+    setSuccess(succ);
+
+    if (success) {
+      setFullName("");
+      setPhone("");
+      setEmail("");
+      setMessage("");
+    }
   };
 
   return (
@@ -46,7 +55,7 @@ const ContactForm = () => {
             onChange={(e) => setPhone(e.target.value)}
             value={phone}
             type="tel"
-            id="email"
+            id="phone"
             placeholder="0922761594"
           />
         </div>
@@ -84,12 +93,15 @@ const ContactForm = () => {
       </form>
 
       <div className="bg-slate-100 mx-auto flex flex-col w-[90%] md:w-[50%] md:mx-0">
-        <div className="text-red-600 px-5 py-2 w-[90%] md:w-[50%] md:mx-0">
-          Error Message
-        </div>
+        {error &&
+          error.map((errors) => {
+            <div className="text-red-600 px-5 py-2 w-[90%] md:w-[50%] md:mx-0">
+              {errors}
+            </div>;
+          })}
       </div>
 
-      <div className="hidden absolute top-[150px] md:flex right-[100px] w-[350px] h-[450px]">
+      <div className="hidden absolute right-[50px] top-[70px] md:flex  xl:right-[150px] w-[400px] h-[500px]">
         <video
           autoPlay
           loop
