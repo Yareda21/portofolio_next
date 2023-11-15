@@ -180,7 +180,7 @@ const About = () => {
           </div>
         </div>
         
-        <div className=" flex flex-col w-full xl:max-w-[48%] h-[480px]">
+        <div className=" flex flex-col w-full lg:justify-center xl:max-w-[48%] h-[480px]">
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => {
               return (

@@ -40,6 +40,13 @@ body {
   height: 420px;
 }
 
+@media (max-width:667px) {
+.swiper {
+  width: 300px;
+  height: 390px;
+}
+}
+
 .swiper-slide {
   display: flex;
   align-items: center;

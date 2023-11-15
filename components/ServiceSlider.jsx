@@ -60,7 +60,7 @@ const serviceData = [
 
 // import required modules
 import { EffectCards } from "swiper/modules";
-import Link from "next/link";
+
 
 export default function App() {
   return (
@@ -76,7 +76,7 @@ export default function App() {
             <SwiperSlide key={index}>
               <div
                 className="bg-[rgba(65,47,123,0.15)] h-max rounded-lg px-6 py-8
-            flex sm:flex-col gap-x-6 sm:gap-x-0 group hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300"
+            flex-col gap-x-6 sm:gap-x-0 group hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300"
               >
                 {/* icon */}
                 <div>{item.icon}</div>
@@ -89,7 +89,11 @@ export default function App() {
                 <div>{item.photo}</div>
                 {/* arrow */}
                 <div className="text-2xl">
-                  <a className="cursor-pointer flex" href={item.link} target="_blank">
+                  <a
+                    className="cursor-pointer flex"
+                    href={item.link}
+                    target="_blank"
+                  >
                     Go
                     <RxArrowTopRight />
                   </a>
