@@ -28,17 +28,19 @@ const serviceData = [
   },
   {
     icon: <RxPencil2 />,
-    title: "Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Tour and Travel Website",
+    description:
+      "This is a website for tour companies to facilitate and connect with their clients. the website provides booking, flight plan and many more.. ",
     photo: "photo",
-    link: "https://yareda21.github.io",
+    link: "https://yars21.github.io/travel/",
   },
   {
     icon: <RxDesktop />,
-    title: "Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "MIT College",
+    description:
+      "Millennials Institute of Technology website is an educational website for colleges or a university, it shows courses given by the institute and many more... ",
     photo: "photo",
-    link: "https://yareda21.github.io",
+    link: "https://yars21.github.io/school/",
   },
   {
     icon: <RxReader />,
