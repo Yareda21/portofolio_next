@@ -44,23 +44,22 @@ const serviceData = [
   },
   {
     icon: <RxReader />,
-    title: "Copywriting",
+    title: "Crud App With Next.js",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     photo: "photo",
-    link: "https://yareda21.github.io",
+    link: "https://topic-crud.netlify.app/",
   },
   {
     icon: <RxRocket />,
-    title: "SEO",
+    title: "GitHub",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     photo: "photo",
-    link: "https://yareda21.github.io",
+    link: "https://github.com/Yareda21",
   },
 ];
 
 // import required modules
 import { EffectCards } from "swiper/modules";
-
 
 export default function App() {
   return (
