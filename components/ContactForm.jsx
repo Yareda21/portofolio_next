@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 
-
 const ContactForm = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -26,13 +25,7 @@ const ContactForm = () => {
     const { msg, succ } = await res.json();
     setError(msg);
     setSuccess(succ);
-
-    if (success) {
-      setFullName("");
-      setPhone("");
-      setEmail("");
-      setMessage("");
-    }
+    location.reload();
   };
 
   return (
