@@ -84,8 +84,8 @@ export default function App() {
                   <div>{item.title}</div>
                   <p>{item.description}</p>
                 </div>
-                {/* photo */}
-                <div>{item.photo}</div>
+                {/* photo
+                <div>{item.photo}</div> */}
                 {/* arrow */}
                 <div className="text-2xl">
                   <a
