@@ -22,22 +22,20 @@ const OpenCards = () => {
     },
   };
 
-const cardImages = ["/a.jpeg", "/b.jpg", "/c.png", "/d.jpg", "/f.jpeg"];
-const service = [
-  "Full Stack",
-  "Frontend Development",
-  "Mobile Application",
-  "Digital Marketing",
-  "Software Development",
-];
+  const cardImages = ["/a.jpeg", "/b.jpg", "/c.png", "/f.jpeg"];
+  const service = [
+    "Full Stack",
+    "Frontend Development",
+    "Mobile Application",
+    "Software Development",
+  ];
 
-const cardDescriptions = [
-  "This is a description, write whatever you need here, this is just text for a test",
-  "This is a description, write whatever you need here, this is just text for a test",
-  "This is a description, write whatever you need here, this is just text for a test",
-  "This is a description, write whatever you need here, this is just text for a test",
-  "This is a description, write whatever you need here, this is just text for a test",
-];
+  const cardDescriptions = [
+    "A powerful combination of four JavaScript-based technologies commonly used to build full-stack web applications",
+    "The exciting realm where creativity meets technology to bring websites and web applications to life.",
+    "creating software specifically for smartphones and tablets. It's like building websites, but tailored for smaller screens and touch controls. ",
+    "Python has become a go-to language for software development, Check it out",
+  ];
 
   return (
     <section className="flex flex-col justify-center items-center h-full w-full px-5 ">
@@ -47,7 +45,7 @@ const cardDescriptions = [
         </div>
         <div className="block m-auto h-[400px] w-full overflow-auto px-5">
           <div className="flex flex-col md:flex-row md:h-[400px] justify-center items-center gap-5">
-            {[0, 1, 2, 3, 4].map((index) => (
+            {[0, 1, 2, 3].map((index) => (
               <motion.div
                 key={index}
                 className={`card cursor-pointer h-[350px] bg-cover bg-center rounded-[20px] ${

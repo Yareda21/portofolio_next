@@ -45,14 +45,16 @@ const serviceData = [
   {
     icon: <RxReader />,
     title: "Crud App With Next.js",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description:
+      "This simple app demonstrates the basics of CRUD application with MongoDB and NEXT js 14.",
     photo: "photo",
     link: "https://topic-crud.netlify.app/",
   },
   {
     icon: <RxRocket />,
     title: "GitHub",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description:
+      "This is one of my Github page, all of the source code for my projects can be found here!",
     photo: "photo",
     link: "https://github.com/Yareda21",
   },
