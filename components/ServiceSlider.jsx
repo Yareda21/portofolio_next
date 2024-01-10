@@ -52,6 +52,14 @@ const serviceData = [
   },
   {
     icon: <RxRocket />,
+    title: "N-Hardware",
+    description:
+      "Data collection website built for a company called N-Hardware. The website is used to collect customer feedback on companies work structure! it has both customer and admin dashboard",
+    photo: "photo",
+    link: "https://n-hardware.netlify.app/",
+  },
+  {
+    icon: <RxRocket />,
     title: "GitHub",
     description:
       "This is one of my Github page, all of the source code for my projects can be found here!",
