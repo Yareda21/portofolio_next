@@ -21,6 +21,13 @@ import {
 const serviceData = [
   {
     icon: <RxCrop />,
+    title: "Exceed Advanced Training",
+    description: "A short term school for Computer training",
+    photo: "photo",
+    link: "https://www.exceedtraining.com.et/",
+  },
+  {
+    icon: <RxCrop />,
     title: "Restaurant food Delivery",
     description: "Help customers shop foods from any restuarant from Addis.",
     photo: "photo",
