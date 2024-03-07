@@ -5,14 +5,12 @@ import Circles from "../../components/Circles";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/variants";
-import CountUp from "react-countup";
 
 import {
   FaHtml5,
   FaCss3,
   FaJs,
   FaReact,
-  FaWordpress,
   FaFigma,
   FaGit,
   FaNode,
@@ -21,8 +19,6 @@ import {
 import {
   SiNextdotjs,
   SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
   SiTailwindcss,
   SiNodedotjs,
   SiPython,
@@ -86,12 +82,13 @@ const aboutData = [
     title: "experience",
     info: [
       {
-        title: "Full Stack Web Developer and Lecturer - Exceed ",
-        stage: "2022 - 2023",
+        title: "Full Stack Web Developer and Instructor - Exceed ",
+        stage: "2021 - 2023",
       },
+
       {
         title: "Web Developer - Great College",
-        stage: "2021 - 2022",
+        stage: "2020 - 2021",
       },
     ],
   },
@@ -101,18 +98,47 @@ const aboutData = [
       {
         title: "Software Engineering - ALX",
         stage: "2023 Cohort 17",
+        link: "",
       },
       {
-        title: "CS50’s Introduction to Computer Science - Harvard",
-        stage: "2023",
+        title: "Introduction to Web Designing",
+        stage: "Great Learning",
+        link: "https://verify.mygreatlearning.com/verify/BKYCOTVZ",
       },
       {
-        title: "Diploma in HTML5, CSS3 and JavaScript - Alison.com ",
-        stage: "2021",
+        title: "Front End Development - HTML",
+        stage: "Great Learning",
+        link: "https://verify.mygreatlearning.com/verify/PEVMXDOI",
+      },
+      {
+        title: "React JS",
+        stage: "Great Learning",
+        link: "https://verify.mygreatlearning.com/verify/YAFMZBNN",
+      },
+      {
+        title: "Front End Development - CSS",
+        stage: "Great Learning",
+        link: "https://verify.mygreatlearning.com/verify/BBCEBHHO",
+      },
+      {
+        title: "CS50’s Introduction to Computer Science",
+        stage: "Harvard University, 2023 ",
+        link: "",
+      },
+      {
+        title: "Diploma in HTML5, CSS3 and JavaScript ",
+        stage: "Alison 2021",
+        link: "",
       },
       {
         title: "Machine Learning for Apps - Alison.com",
         stage: "2021",
+        link: "",
+      },
+      {
+        title: "Responsive Web Design",
+        stage: "2021",
+        link: "https://freecodecamp.org/certification/fcc5acd3da5-ebfe-4b2e-9202-cdd0b2dee5ee/responsive-web-design",
       },
     ],
   },
@@ -179,13 +205,16 @@ const About = () => {
             </div>
           </div>
         </div>
-        
-        <div className=" flex flex-col w-full lg:justify-center xl:max-w-[48%] h-[480px]">
+
+        <div className=" flex flex-col w-full lg:justify-center xl:max-w-[55%] h-[480px]">
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => {
               return (
                 <div
-                  className={`${index === itemIndex && "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"} 
+                  className={`${
+                    index === itemIndex &&
+                    "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
+                  } 
                     cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
                   onClick={() => setIndex(itemIndex)}
                   key={itemIndex}
@@ -203,18 +232,26 @@ const About = () => {
                   key={itemIndex}
                   className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
                 >
-                  {/* title */}
-                  <div className="font-light text-white md:mb-0">
-                    {item.title}
-                  </div>
-                  <div className="hidden md:flex">-</div>
-                  <div>{item.stage}</div>
-                  <div className="flex gap-x-4">
-                    {/* icons */}
-                    {item.icons?.map((icon, itemIndex) => {
-                      return <div className="text-2xl text-white">{icon}</div>;
-                    })}
-                  </div>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                  >
+                    {/* title */}
+                    <div className="font-light text-white md:mb-0">
+                      {item.title}
+                    </div>
+                    <div className="hidden md:flex">-</div>
+                    <div>{item.stage}</div>
+                    <div className="flex gap-x-4">
+                      {/* icons */}
+                      {item.icons?.map((icon, itemIndex) => {
+                        return (
+                          <div className="text-2xl text-white">{icon}</div>
+                        );
+                      })}
+                    </div>
+                  </a>
                 </div>
               );
             })}
