@@ -96,6 +96,16 @@ const aboutData = [
     title: "Certificates and Class",
     info: [
       {
+        title: "CS50’s Introduction to Computer Science",
+        stage: "Harvard University, 2023 ",
+        link: "https://cs50.harvard.edu/certificates/7284249a-f17c-40aa-8978-29d5fb924926.png?size=letter",
+      },
+      {
+        title: "Diploma in HTML5, CSS3 and JavaScript ",
+        stage: "Alison 2021",
+        link: "",
+      },
+      {
         title: "Software Engineering - ALX",
         stage: "2023 Cohort 17",
         link: "",
@@ -120,16 +130,8 @@ const aboutData = [
         stage: "Great Learning",
         link: "https://verify.mygreatlearning.com/verify/BBCEBHHO",
       },
-      {
-        title: "CS50’s Introduction to Computer Science",
-        stage: "Harvard University, 2023 ",
-        link: "",
-      },
-      {
-        title: "Diploma in HTML5, CSS3 and JavaScript ",
-        stage: "Alison 2021",
-        link: "",
-      },
+
+
       {
         title: "Machine Learning for Apps - Alison.com",
         stage: "2021",

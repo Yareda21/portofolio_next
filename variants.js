@@ -13,7 +13,7 @@ export const fadeIn = (direction, delay) => {
     },
     show: {
       y: 0,
-      x: 0,free
+      x: 0,
       opacity: 1,
       transition: {
         type: "tween",

@@ -78,6 +78,11 @@ export default function Home() {
             </Link>
           </div>
         </div>
+{/* 
+        <button 
+          
+          className="z-20 absolute top-0 left-0 h-[90%] w-full"
+        >Download CV and Certificate</button> */}
       </div>
     </div>
   );
