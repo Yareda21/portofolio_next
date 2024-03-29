@@ -12,6 +12,10 @@ import {
   HiEnvelope,
 } from "react-icons/hi2";
 
+export const metadata = {
+  description: "Yared Kebede Full Stack Web Developer",
+};
+
 // nav data
 export const navData = [
   { name: "home", path: "/", icon: <HiHome /> },

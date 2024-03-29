@@ -131,7 +131,6 @@ const aboutData = [
         link: "https://verify.mygreatlearning.com/verify/BBCEBHHO",
       },
 
-
       {
         title: "Machine Learning for Apps - Alison.com",
         stage: "2021",
@@ -146,13 +145,17 @@ const aboutData = [
   },
 ];
 
+export const metadata = {
+  description: "Yared Kebede Full Stack Web Developer",
+};
+
 const About = () => {
   const [index, setIndex] = useState(0);
 
   return (
     <div className="absolute z-40 h-full w-full bg-primary/30  pt-[100px] md:pt-13 xl:text-left">
       <Circles />
-
+      <h1 className="hidden">Yared Kebede</h1>
       <motion.div
         variants={fadeIn("right", 0.2)}
         initial="hidden"

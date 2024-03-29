@@ -4,6 +4,10 @@ import Circles from "@/components/Circles";
 
 import ParticleContainer from "@/components/ParticleContainer";
 
+export const metadata = {
+  description: "Yared Kebede Full Stack Web Developer",
+};
+
 const page = () => {
   return (
     <div className="h-[100vh] w-[100%] bg-primary/30 py-36 flex items-center">

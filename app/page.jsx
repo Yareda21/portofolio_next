@@ -4,16 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { HiArrowRight } from "react-icons/hi2";
 
-
-
+export const metadata = {
+  description: "Yared Kebede Full Stack Web Developer",
+};
 
 export default function Home() {
   return (
     <div className="bg-primary/60 h-full">
+      <h1 className="hidden">Yared Kebede</h1>
       {/* text */}
-      <div
-        className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10"
-      >
+      <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
         {/* notes in home page */}
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
           {/* title */}
@@ -78,7 +78,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-{/* 
+        {/* 
         <button 
           
           className="z-20 absolute top-0 left-0 h-[90%] w-full"
