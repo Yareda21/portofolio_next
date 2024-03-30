@@ -29,6 +29,7 @@ import {
   SiAndroid,
   SiVisualstudiocode,
 } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
 
 //  data
 const aboutData = [
@@ -51,7 +52,14 @@ const aboutData = [
       },
       {
         title: "Software Development",
-        icons: [<SiPython />, <FaGit />, <SiGithub />, <SiLinux />, <SiC />],
+        icons: [
+          <SiPython />,
+          <FaGit />,
+          <SiGithub />,
+          <SiLinux />,
+          <SiC />,
+          <FaJava />,
+        ],
       },
       {
         title: "Application Development",
@@ -150,14 +158,14 @@ const About = () => {
 
   return (
     <div className="absolute z-40 h-full w-full bg-primary/30  pt-[100px] md:pt-13 xl:text-left">
-      <Circles />
+      {/* <Circles /> */}
       <h1 className="hidden">Yared Kebede</h1>
       <motion.div
-        variants={fadeIn("right", 0.2)}
+        variants={fadeIn("right", 0.1)}
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="hidden z-[-10] xl:flex absolute bottom-0 -left-[180px]"
+        className="hidden z-[-10] xl:flex absolute bottom-0 -left-[120px]"
       >
         <div className="hidden xl:flex xl:max-w-none">
           <Image
