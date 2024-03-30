@@ -2,9 +2,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-export const metadata = {
-  description: "Yared Kebede Full Stack Web Developer",
-};
 
 const OpenCards = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);

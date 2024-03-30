@@ -145,10 +145,6 @@ const aboutData = [
   },
 ];
 
-export const metadata = {
-  description: "Yared Kebede Full Stack Web Developer",
-};
-
 const About = () => {
   const [index, setIndex] = useState(0);
 
