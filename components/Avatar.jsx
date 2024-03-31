@@ -1,4 +1,5 @@
 import Image from "next/image";
+import avatar from "@/public/avatar.png";
 
 const Avatar = () => {
   return (
@@ -6,7 +7,7 @@ const Avatar = () => {
       <Image
         loading="lazy"
         layout="responsive"
-        src={"/avatar.png"}
+        src={avatar}
         width={600}
         height={800}
         alt="Yared Kebede"
