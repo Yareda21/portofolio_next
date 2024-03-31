@@ -32,24 +32,7 @@ export default function Home() {
 
       {/* image */}
       <div className="w-[1200px] h-full absolute right-0 bottom-0">
-        {/* bg-image */}
-        {/* <Image
-          src={"/bg-explosion.png"}
-          loading="lazy"
-          layout="responsive"
-          width={600}
-          height={600}
-          className="hidden xl:block xl:bg-cover xl:bg-right
-          xl:bg-no-repeat w-full absolute mix-blend-color-dodge translate-z-0"
-        /> */}
-        {/* <div
-          className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right
-          xl:bg-no-repeat w-full absolute mix-blend-color-dodge translate-z-0 "
-        ></div> */}
-        {/* particles */}
-        <div>
-          <ParticleContainer />
-        </div>
+        <ParticleContainer />
         {/* Avatar */}
         <div
           className="w-full h-full max-w-[500px] max-h-[450px] absolute 
@@ -71,18 +54,12 @@ export default function Home() {
                 width={141}
                 height={148}
                 alt="Yared Kebede"
-                className="animate-spin-slow w-full h-full 
-            max-w-[141px] max-h-[148px]"
+                className="animate-spin-slow w-full h-full max-w-[141px] max-h-[148px]"
               />
               <HiArrowRight className="absolute text-4xl group-hover:translate-x-2 transition-all duration-300" />
             </Link>
           </div>
         </div>
-        {/* 
-        <button 
-          
-          className="z-20 absolute top-0 left-0 h-[90%] w-full"
-        >Download CV and Certificate</button> */}
       </div>
     </div>
   );

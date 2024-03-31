@@ -8,7 +8,6 @@ import {
   HiUser,
   HiViewColumns,
   HiRectangleGroup,
-  HiChatBubbleBottomCenterText,
   HiEnvelope,
 } from "react-icons/hi2";
 
@@ -18,16 +17,7 @@ export const navData = [
   { name: "about", path: "/about", icon: <HiUser /> },
   { name: "services", path: "/services", icon: <HiRectangleGroup /> },
   { name: "work", path: "/work", icon: <HiViewColumns /> },
-  // {
-  //   name: "testimonials",
-  //   path: "/testimonials",
-  //   icon: <HiChatBubbleBottomCenterText />,
-  // },
-  {
-    name: "contact",
-    path: "/contact",
-    icon: <HiEnvelope />,
-  },
+  { name: "contact", path: "/contact", icon: <HiEnvelope /> },
 ];
 
 const Nav = () => {
@@ -36,8 +26,8 @@ const Nav = () => {
   return (
     <nav
       className="flex flex-col items-center xl:justify-center gap-y-4 
-    fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16
-    xl:max-w-md xl:h-screen"
+      fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16
+      xl:max-w-md xl:h-screen"
     >
       <div
         className="flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-10

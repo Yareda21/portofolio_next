@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-
 const OpenCards = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
 
@@ -16,10 +15,10 @@ const OpenCards = () => {
 
   const cardVariants = {
     expanded: {
-      width: "400px",
+      width: "80%",
     },
     collapsed: {
-      width: "200px",
+      width: "20%",
     },
   };
 

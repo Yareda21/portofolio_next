@@ -23,14 +23,27 @@ const ContactForm = () => {
 
     // creating the msg
     const { msg, succ } = await res.json();
-    setError(msg);
+
     setSuccess(succ);
-    location.reload();
+    console.log(success);
+    if (!success) {
+      setError(msg);
+      console.log("error is happening", error);
+      return;
+    }
+    setError(msg);
+
+    setTimeout(() => {
+      // location.reload();
+      window.location.href = "/";
+    }, 4000);
+
+    //
   };
 
   return (
     <div className="w-[100%] md:w-[80%] mx-auto">
-      <form className="flex flex-col gap-2 py-4 mx-auto w-[90%] md:w-[50%] md:mx-0">
+      <form className="flex flex-col gap-2 py-4 mx-auto w-[90%] md:w-[53%] md:mx-0">
         <div>
           <label htmlFor="fullname">Full Name</label>
           <input
@@ -84,16 +97,15 @@ const ContactForm = () => {
           Send
         </button>
       </form>
-
-      <div className="bg-slate-100 mx-auto flex flex-col w-[90%] md:w-[50%] md:mx-0">
-        {error &&
-          error.map((errors) => {
-            <div className="text-red-600 px-5 py-2 w-[90%] md:w-[50%] md:mx-0">
+      <div className="hidden mx-auto md:flex w-[95%] md:w-[53%] md:mx-0">
+        {error.map((errors) => {
+          return (
+            <div className="text-red-600 px-1 py-2 w-[100%] md:w-[50%] md:mx-0">
               {errors}
-            </div>;
-          })}
+            </div>
+          );
+        })}
       </div>
-
       <div className="hidden absolute right-[50px] top-[70px] md:flex  xl:right-[150px] w-[400px] h-[500px]">
         <video
           autoPlay
