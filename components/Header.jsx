@@ -14,9 +14,9 @@ const Header = () => {
               <span className="hidden md:inline">Kebede</span>
             </p>
           </Link>
-          {/* <Link href={"/practice"} className="hidden md:flex">
-            <h1 className=" text-lg font-bold">Project</h1>
-          </Link> */}
+          <Link href={"/practice"} className="hidden md:flex">
+            <h1 className=" text-lg font-bold">Testimonial</h1>
+          </Link>
           {/* Social Media */}
           <Socials />
         </div>

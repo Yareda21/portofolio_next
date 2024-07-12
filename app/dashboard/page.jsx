@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import app from "@/app/lib/config";
 
 const Dashboard = () => {
-  const auth = getAuth();
+  const auth = getAuth(app);
 
   const router = useRouter();
   const [user, setUser] = useState(null);
