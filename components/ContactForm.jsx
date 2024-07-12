@@ -36,7 +36,7 @@ const ContactForm = () => {
     setTimeout(() => {
       // location.reload();
       window.location.href = "/";
-    }, 4000);
+    }, 100);
 
     //
   };

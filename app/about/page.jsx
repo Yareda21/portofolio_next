@@ -30,6 +30,8 @@ import {
   SiVisualstudiocode,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
+import CountUp from "react-countup";
+import ParticleContainer from "@/components/ParticleContainer";
 
 //  data
 const aboutData = [
@@ -158,9 +160,10 @@ const About = () => {
 
   return (
     <div className="absolute z-40 h-full w-full bg-primary/30  pt-[100px] md:pt-13 xl:text-left">
+      <ParticleContainer />
       {/* <Circles /> */}
       <h1 className="hidden">Yared Kebede</h1>
-      <motion.div
+      {/* <motion.div
         variants={fadeIn("right", 0.1)}
         initial="hidden"
         animate="show"
@@ -178,7 +181,7 @@ const About = () => {
             className="translate-z-0 w-full h-full"
           />
         </div>
-      </motion.div>
+      </motion.div> */}
 
       <div className="container mx-auto h-full flex z-10 flex-col items-center xl:flex-row">
         {/* text */}
@@ -201,16 +204,15 @@ const About = () => {
           <div>
             <div>
               {/* experiance */}
-              {/*
+
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={5} /> +
+                  <CountUp start={0} end={5} duration={5} /> +
                 </div>
               </div>
               <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                 Years of Experiance
               </div>
-              */}
             </div>
           </div>
         </div>
