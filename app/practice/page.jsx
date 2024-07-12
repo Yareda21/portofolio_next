@@ -37,16 +37,19 @@ const Exercise = () => {
 
   return (
     <div>
-      <ParticleContainer />
       <div className="flex flex-col items-center justify-center h-screen">
         {user ? (
           <Dashboard />
         ) : (
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <button
+            onClick={signInWithGoogle}
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
             Sign in with Google
           </button>
         )}
       </div>
+      <ParticleContainer />
     </div>
   );
 };
