@@ -1,7 +1,7 @@
 "use client";
 import ParticleContainer from "@/components/ParticleContainer";
 import { useState, useEffect } from "react";
-import app from "@/app/lib/config";
+import { app } from "@/app/lib/config";
 import { getAuth } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
@@ -28,10 +28,17 @@ const Exercise = () => {
     const provider = new GoogleAuthProvider();
 
     try {
-      await signInWithPopup(auth, provider);
+      // Sign in user
+      const result = await signInWithPopup(auth, provider);
+      const signedInUser = result.user;
+
+      // Update user state
+      setUser(signedInUser);
+
+      // Redirect to dashboard
       router.push("/dashboard");
     } catch (error) {
-      console.log("Error sign in!!", error.message);
+      console.log("Error signing in!", error.message);
     }
   };
 
@@ -39,7 +46,7 @@ const Exercise = () => {
     <div>
       <div className="flex flex-col items-center justify-center h-screen">
         {user ? (
-          <Dashboard />
+          <Dashboard user={user} />
         ) : (
           <button
             onClick={signInWithGoogle}
@@ -49,7 +56,6 @@ const Exercise = () => {
           </button>
         )}
       </div>
-      <ParticleContainer />
     </div>
   );
 };

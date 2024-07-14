@@ -35,6 +35,7 @@ import ParticleContainer from "@/components/ParticleContainer";
 
 //  data
 const aboutData = [
+  // Skills
   {
     title: "skills",
     info: [
@@ -75,19 +76,7 @@ const aboutData = [
       },
     ],
   },
-  // {
-  //   title: "awards",
-  //   info: [
-  //     {
-  //       title: "Webby Awards - Honoree",
-  //       stage: "2011 - 2012",
-  //     },
-  //     {
-  //       title: "Adobe Design Achievement Awards - Finalist",
-  //       stage: "2009 - 2010",
-  //     },
-  //   ],
-  // },
+  // Experiance
   {
     title: "experience",
     info: [
@@ -102,6 +91,7 @@ const aboutData = [
       },
     ],
   },
+  // Certificate and class
   {
     title: "Certificates and Class",
     info: [
@@ -159,7 +149,7 @@ const About = () => {
   const [index, setIndex] = useState(0);
 
   return (
-    <div className="absolute z-40 h-full w-full bg-primary/30  pt-[100px] md:pt-13 xl:text-left">
+    <div className="absolute z-40 h-full w-full bg-primary/30 pt-[115px] md:pt-13 xl:text-left">
       <ParticleContainer />
       {/* <Circles /> */}
       <h1 className="hidden">Yared Kebede</h1>
@@ -190,7 +180,7 @@ const About = () => {
             Captivating <span className="text-accent">Stories</span> birth
             magnificent designs.
           </h2>
-          <p className="max-w-[500px] text-white flex-1 xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
+          <p className="hidden md:flex-1 max-w-[500px] text-white xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
             I thrive on difficult projects that necessitate creative solutions,
             and I enjoy working with a wide range of programming languages and
             frameworks, including{" "}
@@ -201,24 +191,24 @@ const About = () => {
             and many more..
           </p>
           {/* counter */}
-          <div>
-            <div>
-              {/* experiance */}
 
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={5} duration={5} /> +
-                </div>
+          <div className="flex md:block gap-3">
+            {/* experiance */}
+
+            <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+              <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                <CountUp start={0} end={5} duration={5} /> +
               </div>
-              <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                Years of Experiance
-              </div>
+            </div>
+            <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+              Years of Experiance
             </div>
           </div>
         </div>
 
-        <div className=" flex flex-col w-full lg:justify-center xl:max-w-[55%] h-[480px]">
+        <div className=" flex flex-col w-full z-10 justify-start lg:justify-center xl:max-w-[55%] h-[480px]">
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
+            {/*  */}
             {aboutData.map((item, itemIndex) => {
               return (
                 <div
@@ -236,12 +226,12 @@ const About = () => {
             })}
           </div>
 
-          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
+          <div className="py-2 xl:py-6 flex flex-col gap-y-2 overflow-auto h-[280px] xl:gap-y-4 items-center xl:items-start">
             {aboutData[index].info.map((item, itemIndex) => {
               return (
                 <div
                   key={itemIndex}
-                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2  text-white/60"
                 >
                   <a
                     href={item.link}
