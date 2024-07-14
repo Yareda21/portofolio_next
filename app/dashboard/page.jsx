@@ -74,7 +74,7 @@ const Dashboard = ({ user }) => {
       <div className="mt-[115px]">
         <div className="md:flex md:w-[90%] justify-between p-2 rounded-lg shadow-md">
           <h1 className="text-md md:text-3xl font-bold mb-4">
-            Wellcome to the dashboard{" "}
+            Wellcome to the dashboard
             {user
               ? user.displayName
                   .split(" ")

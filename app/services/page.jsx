@@ -15,14 +15,14 @@ const OpenCards = () => {
 
   const cardVariants = {
     expanded: {
-      width: "80%",
+      width: "100%",
     },
     collapsed: {
-      width: "20%",
+      width: "80%",
     },
   };
 
-  const cardImages = ["/a.jpeg", "/b.jpg", "/c.png", "/f.jpeg"];
+  const cardImages = ["/a.png", "/b.png", "/c.png", "/d.png"];
   const service = [
     "Full Stack",
     "Frontend Development",
@@ -43,7 +43,7 @@ const OpenCards = () => {
         <div className="max-w-7xl mx-auto px-4 my-1 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl font-extrabold text-white">Services</h1>
         </div>
-        <div className="block m-auto h-[400px] w-full overflow-auto px-5">
+        <div className="block m-auto h-[400px] w-full md:w-[80%] overflow-auto px-5">
           <div className="flex flex-col md:flex-row md:h-[400px] justify-center items-center gap-5">
             {[0, 1, 2, 3].map((index) => (
               <motion.div

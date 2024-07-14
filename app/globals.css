@@ -18,18 +18,18 @@
   color: #f13024;
 }
 
-
 form > div {
   @apply flex flex-col gap-1;
 }
 
-input, textarea {
+input,
+textarea {
   @apply shadow-md px-6 py-1 border border-slate-300 text-black;
 }
 
 @layer base {
   body {
-    @apply bg-secondary overflow-hidden leading-relaxed;
+    @apply bg-primary overflow-hidden leading-relaxed;
   }
   .page {
     @apply w-full h-screen overflow-hidden;
@@ -60,5 +60,4 @@ input, textarea {
   .textarea {
     @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
   }
-  
 }
