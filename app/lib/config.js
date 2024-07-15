@@ -2,13 +2,13 @@ import { getFirestore } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCW_vsFjt65qPYxKketNc4sNr3wkHlL4s4",
-  authDomain: "testimony-46c72.firebaseapp.com",
-  projectId: "testimony-46c72",
-  storageBucket: "testimony-46c72.appspot.com",
-  messagingSenderId: "954784085142",
-  appId: "1:954784085142:web:489dec5b30a7a1a5e2feb7",
-  measurementId: "G-3CDDJFE3WN",
+  apiKey: process.env.NEXT_PUBLIC_APIKEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTHDOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECTID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGEBUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGINGSENDERID,
+  appId: process.env.NEXT_PUBLIC_APPID,
+  measurementId: process.env.NEXT_PUBLIC_MEASUREMENTID,
 };
 
 // Initialize Firebase

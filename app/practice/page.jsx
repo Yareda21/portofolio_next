@@ -24,7 +24,15 @@ const Exercise = () => {
   }, []);
 
   const signInWithGoogle = async () => {
+    console.log("Yared Kebede", process.env.NEXT_PUBLIC_APIKEY);
     const auth = getAuth(app);
+    if (
+      "AIzaSyCW_vsFjt65qPYxKketNc4sNr3wkHlL4s4" ==
+      process.env.NEXT_PUBLIC_APIKEY
+    ) {
+      console.log("Yared Kebede", process.env.NEXT_PUBLIC_APIKEY);
+    }
+
     const provider = new GoogleAuthProvider();
 
     try {
