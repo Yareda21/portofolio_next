@@ -52,6 +52,17 @@ const aboutData = [
           <SiNextdotjs />,
           <SiNodedotjs />,
         ],
+        names: [
+          "Figma",
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "React JS",
+          "Tailwind CSS",
+          "Framer Motion",
+          "Next JS",
+          "Node JS",
+        ],
       },
       {
         title: "Software Development",
@@ -63,6 +74,14 @@ const aboutData = [
           <SiC />,
           <FaJava />,
         ],
+        names: [
+          "Python Programming",
+          "Git",
+          "Github",
+          "Linux",
+          "C Programming",
+          "Java Programming",
+        ],
       },
       {
         title: "Application Development",
@@ -73,6 +92,7 @@ const aboutData = [
           <SiAndroid />,
           <SiVisualstudiocode />,
         ],
+        names: [""],
       },
     ],
   },
@@ -231,12 +251,12 @@ const About = () => {
               return (
                 <div
                   key={itemIndex}
-                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2  text-white/60"
+                  className="flex flex-col md:flex-row max-w-max gap-x-2  text-white/60"
                 >
                   <a
                     href={item.link}
                     target="_blank"
-                    className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                    className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 gap-y-2 items-center text-white/60"
                   >
                     {/* title */}
                     <div className="font-light text-white md:mb-0">
@@ -248,7 +268,12 @@ const About = () => {
                       {/* icons */}
                       {item.icons?.map((icon, itemIndex) => {
                         return (
-                          <div className="text-2xl text-white">{icon}</div>
+                          <div
+                            className="text-2xl text-white"
+                            title={icon.names}
+                          >
+                            {icon}
+                          </div>
                         );
                       })}
                     </div>
