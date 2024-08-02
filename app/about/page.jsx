@@ -184,7 +184,7 @@ const About = () => {
                 exit="hidden"
                 className="hidden z-[-10] xl:flex absolute bottom-0 -left-[120px]"
             >
-                <div className="hidden xl:flex xl:max-w-none">
+                <div className="hidden xl:flex">
                     <Image
                         src={"/avatar.png"}
                         loading="lazy"
@@ -192,7 +192,7 @@ const About = () => {
                         width={400}
                         height={600}
                         alt="Yared Kebede"
-                        className="translate-z-0 w-full h-full"
+                        className="translate-z-0 w-700px h-auto"
                     />
                 </div>
             </motion.div>
