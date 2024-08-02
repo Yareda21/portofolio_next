@@ -185,14 +185,14 @@ const About = () => {
                 className="hidden z-[-10] xl:flex absolute bottom-0 -left-[120px]"
             >
                 <div className="hidden xl:flex">
-                    <Image
+                    <img
                         src={"/avatar.png"}
                         loading="lazy"
                         layout="responsive"
                         width={400}
                         height={600}
                         alt="Yared Kebede"
-                        className="translate-z-0 w-700px h-auto"
+                        className="translate-z-0 "
                     />
                 </div>
             </motion.div>
