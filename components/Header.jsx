@@ -18,7 +18,12 @@ const Header = () => {
                         href={"/testimony"}
                         className="flex text-sm md:text-lg lg:text-xl"
                     >
-                        <h1 className=" text-lg font-bold">Testimonial</h1>
+                        <h1 className="text-lg font-bold text-center">
+                            Testimonial{" "}
+                            <span className="hidden lg:flex">
+                                ስለ እኔ ሠዎች ምን ይላሉ??
+                            </span>
+                        </h1>
                     </Link>
                     {/* Social Media */}
                     <Socials />
