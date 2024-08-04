@@ -36,6 +36,9 @@ module.exports = {
                 poppins: [`var(--font-poppins)`, "sans-serif"],
                 sora: [`var(--font-sora)`, "sans-serif"],
             },
+            height: {
+                "screen-minus-320": "calc(100vh - 320px)",
+            },
         },
     },
     container: {

@@ -35,6 +35,7 @@ const Dashboard = ({ user }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
         try {
             console.log("Function working");
 
@@ -43,7 +44,7 @@ const Dashboard = ({ user }) => {
                 displayName: currentUser.displayName,
                 photoURL: currentUser.photoURL || "Not Available",
                 email: currentUser.email,
-                phoneNumber,
+                phone,
                 whereMet,
                 course,
                 testimonial,
@@ -75,17 +76,19 @@ const Dashboard = ({ user }) => {
         }
     };
 
+    const maxLength = 270;
+
     return (
-        <div className="p-3 h-screen font-sans">
-            <div className="mt-[110px]">
-                <div className="md:flex w-[90%] justify-between p-2 rounded-lg shadow-md">
+        <div className="p-3 h-screen font-sans w-full">
+            <div className="mt-[110px] ">
+                <div className="md:flex w-[90%] justify-around p-2 rounded-lg shadow-md">
                     <h1 className="text-md md:text-3xl font-bold mb-4">
                         Wellcome to the dashboard <br />
                         {user ? user.displayName : ""}
                     </h1>
                     <button
                         onClick={handleLogout}
-                        className="bg-red-500 hover:bg-red-700 text-sm text-white font-bold md:py-2 py-1 px-2  md:px-4 rounded"
+                        className="bg-red-500 hover:bg-red-700 h-10 text-sm text-white font-bold md:py-2 py-1 px-2  md:px-4 rounded"
                     >
                         Logout
                     </button>
@@ -93,15 +96,16 @@ const Dashboard = ({ user }) => {
 
                 <form
                     onSubmit={handleSubmit}
-                    className="flex md:flex-row mt-4 w-full md:justify-between text-sm md:text-base h-[290px] overflow-auto flex-col mx-3 md:gap-4 gap-1 md:w-[80%] md:ml-10"
+                    className="flex md:flex-row mt-4 w-full md:justify-center text-sm md:text-base h-screen-minus-320 md:h-auto overflow-auto flex-col mx-3 md:gap-4 gap-1 md:w-[80%] md:ml-10"
                 >
-                    <div>
+                    <div className=" w-full">
                         <label className="flex flex-col md:my-3 gap-1">
                             Where did you meet Yared?
                             <select
+                                required
                                 value={whereMet}
                                 onChange={(e) => setWhereMet(e.target.value)}
-                                className="p-2 border w-[400px]  text-black border-gray-300 rounded-md"
+                                className="p-2 border w-auto mr-1  text-black border-gray-300 rounded-md"
                             >
                                 <option value="">Select...</option>
                                 <option value="class">Class</option>
@@ -115,14 +119,15 @@ const Dashboard = ({ user }) => {
                             Course attended:
                             <select
                                 value={course}
+                                required
                                 onChange={(e) => setCourse(e.target.value)}
-                                className="p-2 w-[400px] text-black border border-gray-300 rounded-md"
+                                className="p-2 w-auto mr-1  text-black border border-gray-300 rounded-md"
                             >
                                 <option value="">Select...</option>
                                 <option value="python">Python</option>
                                 <option value="webDev">Web Development</option>
                                 <option value="programmingKids">
-                                    Programming for Kids
+                                    Coding and Programming
                                 </option>
                                 <option value="digitalMarketing">
                                     Digital Marketing
@@ -136,6 +141,7 @@ const Dashboard = ({ user }) => {
                                 <option value="dataScience">
                                     My Co-Worker
                                 </option>
+                                <option value="dataScience">Work</option>
 
                                 <option value="others">Others</option>
                             </select>
@@ -143,22 +149,28 @@ const Dashboard = ({ user }) => {
                         <label className="flex flex-col md:my-3 gap-1">
                             Testimonial:
                             <textarea
+                                maxlength="270"
                                 value={testimonial}
                                 onChange={(e) => setTestimonial(e.target.value)}
                                 placeholder="Enter your testimonial"
                                 required
-                                className="p-2 w-[400px] border border-gray-300 rounded-md"
+                                className="p-2 w-auto mr-1  border border-gray-300 rounded-md"
                             />
+                            <p>
+                                {testimonial.length}/{maxLength} characters used
+                            </p>
                         </label>
                     </div>
-                    <div>
+                    <div className=" w-full">
                         <label className="flex flex-col md:my-3 gap-1">
                             Overall Performance
                             <select
                                 value={rating}
+                                required
                                 onChange={(e) => setRating(e.target.value)}
-                                className="p-2 w-[400px] border text-black border-gray-300 rounded-md"
+                                className="p-2 w-auto mr-1  border text-black border-gray-300 rounded-md"
                             >
+                                <option value="">Select...</option>
                                 <option value="1">1 - Poor</option>
                                 <option value="2">2 - Fair</option>
                                 <option value="3">3 - Good</option>
@@ -170,10 +182,11 @@ const Dashboard = ({ user }) => {
                             Phone Number
                             <input
                                 value={phone}
+                                required
                                 onChange={(e) => setPhone(e.target.value)}
                                 type="tel"
                                 placeholder="Enter Phone Number...."
-                                className="p-2 w-[400px] border text-black border-gray-300 rounded-md"
+                                className="p-2 w-auto mr-1  border text-black border-gray-300 rounded-md"
                             />
                         </label>
                         <button
