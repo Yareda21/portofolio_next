@@ -15,9 +15,11 @@ const Dashboard = ({ user }) => {
     const [whereMet, setWhereMet] = useState("");
     const [course, setCourse] = useState("");
     const [testimonial, setTestimonial] = useState("");
+    const [rating, setRating] = useState("");
+    const [currentUser, setCurrentUser] = useState(user);
+
     const router = useRouter();
     const auth = getAuth(app);
-    const [currentUser, setCurrentUser] = useState(user);
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -44,6 +46,7 @@ const Dashboard = ({ user }) => {
                 whereMet,
                 course,
                 testimonial,
+                rating,
                 createdAt: new Date(),
             });
 
@@ -51,6 +54,7 @@ const Dashboard = ({ user }) => {
             setWhereMet("");
             setCourse("");
             setTestimonial("");
+            setRating("");
             alert("Testimony Collected");
             router.push("/");
             return true;
@@ -147,6 +151,20 @@ const Dashboard = ({ user }) => {
                             required
                             className="p-2 border border-gray-300 rounded-md"
                         />
+                    </label>
+                    <label className="flex flex-col gap-1">
+                        Overall Performance
+                        <select
+                            value={rating}
+                            onChange={(e) => setRating(e.target.value)}
+                            className="p-2 border text-black border-gray-300 rounded-md"
+                        >
+                            <option value="1">1 - Poor</option>
+                            <option value="2">2 - Fair</option>
+                            <option value="3">3 - Good</option>
+                            <option value="4">4 - Very Good</option>
+                            <option value="5">5 - Excellent</option>
+                        </select>
                     </label>
                     <button
                         type="submit"

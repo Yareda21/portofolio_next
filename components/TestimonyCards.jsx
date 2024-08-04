@@ -2,6 +2,7 @@
 import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { SiGmail } from "react-icons/si";
 
 // Import Swiper styles
 import "swiper/css";
@@ -10,6 +11,7 @@ import "../app/style.css";
 
 // import required modules
 import { EffectCards } from "swiper/modules";
+import { BiLogoGmail } from "react-icons/bi";
 
 import { db } from "@/app/lib/config";
 import { useState, useEffect } from "react";
@@ -48,54 +50,29 @@ export default function TestimonyCards() {
                 {testimonyData.map((item, index) => {
                     return (
                         <SwiperSlide key={index}>
-                            <div class="max-w-xl">
-                                <div class=" dark:bg-gray-800 p-6 rounded-lg shadow-xl">
-                                    <p class=" text-base md:text-lg h-30 sm:h-auto">
+                            <div className="bg-[rgba(65,47,123,0.15)] h-max rounded-lg px-6 py-8 flex-col gap-x-6 sm:gap-x-0 group hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300">
+                                <img
+                                    src={item.photoURL}
+                                    className="w-16 h-16 rounded-full border-2 border-indigo-500"
+                                />
+                                {/* icon */}
+                                <div>{item.displayName}</div>
+                                {/* title and desc */}
+                                <div>
+                                    <p className=" text-base text-black ">
                                         {item.testimonial}
                                     </p>
-
-                                    <div class="flex mt-4 justify-end">
-                                        <div class="w-14 h-14 mr-4 md:w-16 md:h-16">
-                                            <img
-                                                class="rounded-full"
-                                                src={item.photoURL}
-                                                alt="John Doe Profile Picture"
-                                            />
-                                        </div>
-                                        <div class="md:text-lg">
-                                            <div class="flex flex-row">
-                                                <p class="font-semibold mr-2">
-                                                    {item.displayName}
-                                                </p>
-                                                <div class="flex gap-3">
-                                                    <a
-                                                        href="#"
-                                                        class="dark:hover:text-blue-500 transition-colors duration-75"
-                                                        target="_blank"
-                                                    >
-                                                        <i class="fa-brands fa-linkedin"></i>
-                                                        {item.email}
-                                                    </a>
-                                                    <a
-                                                        href="#"
-                                                        class="dark:hover:text-blue-500 transition-colors duration-75"
-                                                        target="_blank"
-                                                    >
-                                                        <i class="fa-brands fa-twitter"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                            <p class=" text-sm">
-                                                <span>
-                                                    We met : {item.whereMet}
-                                                </span>
-                                                <span>
-                                                    Phone Number: : {item.phone}
-                                                </span>
-                                            </p>
-                                        </div>
-                                    </div>
+                                </div>
+                                {/* photo
+                                        <div>{item.photo}</div> */}
+                                {/* arrow */}
+                                <div className="flex  text-2xl">
+                                    <span className=" mr-3 text-gray-800 font-semibold">
+                                        <BiLogoGmail />
+                                    </span>
+                                    <span className=" text-white text-sm mt-0.5">
+                                        {item.email}
+                                    </span>
                                 </div>
                             </div>
                         </SwiperSlide>

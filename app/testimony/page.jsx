@@ -3,8 +3,9 @@ import TestimonyCards from "@/components/TestimonyCards";
 import Link from "next/link";
 import { db } from "../lib/config";
 import { useState, useEffect } from "react";
-import { getDoc, collection, getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 
+// gettind data from firestore
 async function getDataFromFirestore() {
     const querySnapShoot = await getDocs(collection(db, "testimonials"));
     const data = [];
@@ -14,6 +15,7 @@ async function getDataFromFirestore() {
 
     return data;
 }
+
 
 export default function Testimony() {
     const [testimonyData, setTestimonyData] = useState([]);
@@ -26,7 +28,7 @@ export default function Testimony() {
 
         fetchData();
     }, []);
-    console.log(testimonyData);
+    
     return (
         <section class="py-24 px-2 md:px-10 flex items-center ">
             <div class="container mx-auto px-4">
