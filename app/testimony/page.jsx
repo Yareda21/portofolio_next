@@ -16,7 +16,6 @@ async function getDataFromFirestore() {
     return data;
 }
 
-
 export default function Testimony() {
     const [testimonyData, setTestimonyData] = useState([]);
 
@@ -28,7 +27,7 @@ export default function Testimony() {
 
         fetchData();
     }, []);
-    
+
     return (
         <section class="py-24 px-2 md:px-10 flex items-center ">
             <div class="container mx-auto px-4">
@@ -36,8 +35,8 @@ export default function Testimony() {
                     <div class="mb-8 lg:mb-0 lg:w-1/2 mr-5">
                         <h2 class="text-xl md:text-3xl font-semibold mt-3 mb-2">
                             Welcome to my{" "}
-                            <span class="text-blue-700 underline underline-offset-4">
-                                testimonials
+                            <span class="text-blue-200 underline underline-offset-4">
+                                Testimonials
                             </span>{" "}
                         </h2>
                         <p class="hidden md:flex font-light text-gray-50">
