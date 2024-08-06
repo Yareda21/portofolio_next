@@ -150,6 +150,7 @@ const Dashboard = ({ user }) => {
                             Testimonial:
                             <textarea
                                 maxlength="270"
+                                minLength="100"
                                 value={testimonial}
                                 onChange={(e) => setTestimonial(e.target.value)}
                                 placeholder="Enter your testimonial"
