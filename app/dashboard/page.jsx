@@ -51,18 +51,19 @@ const Dashboard = ({ user }) => {
                 rating,
                 createdAt: new Date(),
             });
-
+            
             // Clear form
+            alert("Testimony Collected");
             setWhereMet("");
             setCourse("");
             setTestimonial("");
             setRating("");
             setPhone("");
-            alert("Testimony Collected");
-            router.push("/");
+            router.push("/testimony");
             return true;
         } catch (error) {
             console.log("Failed ", error);
+            alert("Testimony NOT Collected");
             return false;
         }
     };

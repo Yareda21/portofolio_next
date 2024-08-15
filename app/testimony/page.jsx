@@ -29,7 +29,7 @@ export default function Testimony() {
     }, []);
 
     return (
-        <section class="py-24 px-2 md:px-10 flex items-center ">
+        <section class="py-24 px-2 md:px-10 flex h-[screen-] items-center ">
             <div class="container mx-auto px-4">
                 <div class="flex flex-col lg:flex-row items-center justify-between">
                     <div class="mb-8 lg:mb-0 lg:w-1/2 mr-5">
@@ -41,12 +41,12 @@ export default function Testimony() {
                         </h2>
                         <p class="hidden md:flex font-light text-gray-50">
                             Here, you'll find the voices of those I've had the
-                            pleasure of working with and teaching. From coding
+                            pleasure of working with and teach. From coding
                             to digital marketing, my journey has been enriched
                             by the diverse experiences and feedback from my
-                            students and colleagues.!
+                            students and colleagues!
                         </p>
-                        <button className="bg-blue-500 mt-3 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        <button className="bg-blue-500 mt-4 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                             <Link href="/practice">Give a testimoney</Link>
                         </button>
                     </div>
