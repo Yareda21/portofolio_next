@@ -42,7 +42,7 @@ const Dashboard = ({ user }) => {
             await addDoc(collection(db, "testimonials"), {
                 userId: currentUser.uid,
                 displayName: currentUser.displayName,
-                photoURL: currentUser.photoURL || "Not Available",
+                photoURL: currentUser.photoURL,
                 email: currentUser.email,
                 phone,
                 whereMet,
@@ -51,7 +51,7 @@ const Dashboard = ({ user }) => {
                 rating,
                 createdAt: new Date(),
             });
-            
+
             // Clear form
             alert("Testimony Collected");
             setWhereMet("");
