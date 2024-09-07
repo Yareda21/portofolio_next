@@ -37,7 +37,7 @@ module.exports = {
                 sora: [`var(--font-sora)`, "sans-serif"],
             },
             height: {
-                "screen-minus-320": "calc(100vh - 320px)",
+                "screen-minus-380": "calc(100vh - 380px)",
             },
         },
     },
