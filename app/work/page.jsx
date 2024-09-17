@@ -19,7 +19,7 @@ const page = () => {
                     <h2 className="h2 xl:mt-8">
                         <span className="text-accent">My Projects.</span>
                     </h2>
-                    <p className="hidden mb-4 max-w-[400px] text-xl lg:text-2xl mx-auto lg:mx-0">
+                    <p className="hidden lg:flex mb-4 max-w-[400px] text-xl lg:text-2xl mx-auto lg:mx-0">
                         These are my few projects I have done!! Swipe to see
                         different projects with diffrent technologies.
                     </p>

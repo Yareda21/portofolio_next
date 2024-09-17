@@ -81,7 +81,7 @@ const Dashboard = ({ user }) => {
 
     return (
         <div className="p-3 h-screen font-sans w-full">
-            <div className="mt-[110px] ">
+            <div className="mt-[100px] ">
                 <div className="md:flex w-[90%] justify-around p-2 rounded-lg shadow-md">
                     <h1 className="text-md md:text-3xl font-bold mb-4">
                         Wellcome to the dashboard <br />
@@ -97,7 +97,7 @@ const Dashboard = ({ user }) => {
 
                 <form
                     onSubmit={handleSubmit}
-                    className="flex md:flex-row mt-4 w-full md:justify-center text-sm md:text-base h-screen-minus-320 md:h-auto overflow-auto flex-col mx-3 md:gap-4 gap-1 md:w-[80%] md:ml-10"
+                    className="flex md:flex-row mt-4 w-full md:justify-center text-sm md:text-base h-screen-minus-380 md:h-auto overflow-auto flex-col mx-3 md:gap-4 gap-1 md:w-[80%] md:ml-10"
                 >
                     <div className=" w-full">
                         <label className="flex flex-col md:my-3 gap-1">
@@ -193,7 +193,7 @@ const Dashboard = ({ user }) => {
                         </label>
                         <button
                             type="submit"
-                            className="p-2 mt-4 w-[400px] bg-blue-500 text-white font-bold rounded-md hover:bg-blue-700 transition-colors"
+                            className="p-2 mt-4 w-full bg-blue-500 text-white font-bold rounded-md hover:bg-blue-700 transition-colors"
                         >
                             Submit
                         </button>
