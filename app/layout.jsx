@@ -3,6 +3,7 @@ import "./globals.css";
 import TopLeftImg from "@/components/TopLeftImg";
 import Nav from "@/components/Nav";
 import Header from "@/components/Header";
+import Head from "next/head";
 
 const sora = Sora({
     subsets: ["latin"],
@@ -18,6 +19,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
+            <Head>
+                <meta
+                    name="msvalidate.01"
+                    content="CE7DB23694AB00D7C714F6B7296C22B0"
+                />
+                <title>{metadata.title}</title>
+                <meta name="description" content={metadata.description} />
+            </Head>
             <body
                 className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative ease-linear duration-300`}
             >
