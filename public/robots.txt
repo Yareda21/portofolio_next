@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://yared21.netlify.app/sitemap.xml
