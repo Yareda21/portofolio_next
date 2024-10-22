@@ -14,6 +14,7 @@ import { serviceData } from "@/assets/imports";
 
 // import required modules
 import { EffectCards } from "swiper/modules";
+import Image from "next/image";
 
 export default function App() {
     return (
@@ -29,14 +30,22 @@ export default function App() {
                         <SwiperSlide key={index}>
                             <div className="bg-[rgba(65,47,123,0.15)] rounded-lg px-6 py-8 flex-col gap-x-6 sm:gap-x-0 group hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300">
                                 {/* icon */}
-                                <div>{item.icon}</div>
+
                                 {/* title and desc */}
                                 <div>
                                     <div>{item.title}</div>
-                                    <p>{item.description}</p>
+                                    <p className=" text-sm">
+                                        {item.description}
+                                    </p>
                                 </div>
-                                {/* photo
-                <div>{item.photo}</div> */}
+                                {/* photo */}
+                                <div>
+                                    <Image
+                                        src={item.photo}
+                                        width="400"
+                                        height="200"
+                                    />
+                                </div>
                                 {/* arrow */}
                                 <div className="text-2xl">
                                     <a
