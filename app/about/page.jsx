@@ -120,6 +120,11 @@ const aboutData = [
                 link: "https://cs50.harvard.edu/certificates/7284249a-f17c-40aa-8978-29d5fb924926.png?size=letter",
             },
             {
+                title: "Software Engineering - ALX",
+                stage: "2023 Cohort 17",
+                link: "https://res.cloudinary.com/dlomcic7f/image/upload/v1732112628/personal/ALX_final_Certificate_gl0pzi.png",
+            },
+            {
                 title: "Diploma in HTML5, CSS3 and JavaScript ",
                 stage: "Alison 2021",
                 link: "https://alison.com/certification/check/%242y%2410%24GM0HVEEukPgHTjf90glzee81pnpEl7tawSlAG5uPp5RrG0i1NF8AS",
@@ -128,11 +133,6 @@ const aboutData = [
                 title: "Machine Learning for Apps ",
                 stage: "Alison 2021",
                 link: "https://alison.com/certification/check/%242y%2410%24Q8sqh9zQilAMmBjwi4.wuzKkw9HFAkpy9GBzxo0AZXESx3bGkthC",
-            },
-            {
-                title: "Software Engineering - ALX",
-                stage: "2023 Cohort 17",
-                link: "",
             },
             {
                 title: "Introduction to Web Designing",
