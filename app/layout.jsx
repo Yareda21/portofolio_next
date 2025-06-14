@@ -4,6 +4,10 @@ import TopLeftImg from "@/components/TopLeftImg";
 import Nav from "@/components/Nav";
 import Header from "@/components/Header";
 import Head from "next/head";
+import { DefaultSeo } from "next-seo";
+import SEO from "../next-seo.config";
+// ... rest of layout
+
 
 const sora = Sora({
     subsets: ["latin"],
@@ -39,6 +43,7 @@ export default function RootLayout({ children }) {
                 {/* <TopLeftImg /> */}
                 <Header />
                 {children}
+                <DefaultSeo {...SEO} />;
             </body>
         </html>
     );
